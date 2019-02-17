@@ -1,4 +1,21 @@
 <div class="container">
+  <div class="form">
+      <dx-button
+      id="button"
+      [height]="40"
+      [width]="180"
+      (onClick)="onClick($event)">
+      <div *dxTemplate="let data of 'content'">
+          <dx-load-indicator class='button-indicator'
+              [visible]="loadIndicatorVisible">
+          </dx-load-indicator>
+          <span class='dx-button-text'>{{buttonText}}</span>
+      </div>
+    </dx-button>
+  </div>
+  <div>
+    <a routerLink="/schedule/create">Create schedule<span></span></a>
+  </div>
   <div class="table-responsive">
     <div class="card">
       <div class="card-block">

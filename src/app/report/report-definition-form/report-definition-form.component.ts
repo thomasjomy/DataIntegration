@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-report-definition-form',
-  templateUrl: './report-definition-form.component.html',
-  styleUrls: ['./report-definition-form.component.css']
+  selector: "app-report-definition-form",
+  templateUrl: "./report-definition-form.component.html",
+  styleUrls: ["./report-definition-form.component.css"]
 })
 export class ReportDefinitionFormComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -10,9 +10,9 @@ export class Transfer {
   }
 
   export enum TransferStatus {
-    Ok,
-    Ready,
-    Init,
-    Ack,
-    Paused
+    Ok = "Ok",
+    Ready = "Ready",
+    Initialized =  "Initialized",
+    Ack = "Ack",
+    Paused = "Paused"
   }

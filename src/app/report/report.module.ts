@@ -1,3 +1,12 @@
+import {
+  DxNavBarModule,
+  DxButtonModule,
+  DxLoadIndicatorModule,
+  DxTemplateModule
+} from "devextreme-angular";
+import { DxContextMenuModule } from "devextreme-angular";
+import { DxDataGridModule } from "devextreme-angular";
+import { DevExtremeModule } from "devextreme-angular";
 import { ReportExecutionService } from "./_service/report-execution.service";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule, ModuleWithProviders } from "@angular/core";
@@ -14,10 +23,19 @@ import { ReportRoutingModule } from "./report-routing.module";
     ReportDefinitionFormComponent,
     ReportExecutionComponent
   ],
-  imports: [CommonModule, ReportRoutingModule],
+  imports: [
+    CommonModule,
+    ReportRoutingModule,
+    DevExtremeModule,
+    DxDataGridModule,
+    DxContextMenuModule,
+    DxNavBarModule,
+    DxButtonModule,
+    DxLoadIndicatorModule,
+    DxTemplateModule
+  ],
   exports: [RouterModule]
 })
-
 export class ReportModule {
   static forRoot(): ModuleWithProviders {
     return {

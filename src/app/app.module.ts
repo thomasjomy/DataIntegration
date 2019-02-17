@@ -1,10 +1,18 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { TaskListComponent } from "./task-list/task-list.component";
 import { NavbarComponent } from "./layout/navbar/navbar.component";
 import { DevExtremeModule } from "devextreme-angular";
 import { DxDataGridModule } from "devextreme-angular";
+import { DxContextMenuModule } from "devextreme-angular";
+import { DxNavBarModule } from "devextreme-angular";
+import {
+  DxButtonModule,
+  DxLoadIndicatorModule,
+  DxTemplateModule
+} from "devextreme-angular";
 
 import { AlertComponent } from "./_directives/index";
 import { AlertService } from "./_service/index";
@@ -40,8 +48,14 @@ import { AppRoutingModule } from "./app-routing.module";
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     DevExtremeModule,
     DxDataGridModule,
+    DxContextMenuModule,
+    DxNavBarModule,
+    DxButtonModule,
+    DxLoadIndicatorModule,
+    DxTemplateModule,
     ReportModule.forRoot(),
     AppRoutingModule
   ],

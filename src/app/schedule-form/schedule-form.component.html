@@ -1,3 +1,20 @@
-<p>
-  schedule-form works!
-</p>
+<form [formGroup]="scheduleForm" (ngSubmit)="saveSchedule()">
+  <div>
+    <label for="scheduleName">Schedule Name</label>
+    <input
+      type="text"
+      name="scheduleName"
+      id="scheduleName"
+      [formControl]="scheduleName"
+    />
+    <div [hidden]="scheduleName.valid || scheduleName.untouched">
+      <div [hidden]="!scheduleName.hasError('required')">
+        Schedule name is required.
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <button type="submit">Save</button>
+</form>

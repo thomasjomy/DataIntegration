@@ -1,7 +1,16 @@
-<dx-data-grid id="tranfer" [dataSource]="transfers" [showBorders]="true">
-  <dxi-column dataField="Id"></dxi-column>
-  <dxi-column dataField="Name"></dxi-column>
-  <dxi-column dataField="Status"></dxi-column>
+<dx-data-grid
+  id="tranfer"
+  [dataSource]="transfers"
+  [showBorders]="true"
+>
+  <dxi-column dataField="id"></dxi-column>
+  <dxi-column dataField="name"></dxi-column>
+  <dxi-column dataField="status"></dxi-column>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-editing
+    [allowAdding]="true"
+    [allowDeleting]="true"
+    [allowUpdating]="true"
+  ></dxo-editing>
 </dx-data-grid>
-
-<dx-button text="Refresh transfer" (onClick)="getTransfer()"></dx-button>

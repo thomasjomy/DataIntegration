@@ -12,14 +12,14 @@ export class TransferService {
       {
         id: "1231",
         name: "rcco-instruments",
-        status: TransferStatus.Ready,
-        count: 0
+        status: TransferStatus.Ok,
+        count: 1
       },
       {
         id: "1232",
         name: "rcco-credit",
-        status: TransferStatus.Ready,
-        count: 0
+        status: TransferStatus.Ack,
+        count: 1
       },
       {
         id: "1233",

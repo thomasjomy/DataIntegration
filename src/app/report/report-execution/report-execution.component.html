@@ -1,26 +1,16 @@
-<div class="container">
-  <div class="table-responsive">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">Report Run</h3>
-        <div class="card-text">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Staus</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let execution of reportExecutions" class="task">
-                <td>{{ execution.id }}</td>
-                <td>{{ execution.name }}</td>
-                <td>{{ execution.status }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<dx-data-grid
+  id="reportExecution"
+  [dataSource]="reportExecutions"
+  [showBorders]="true"
+>
+  <dxi-column dataField="id"></dxi-column>
+  <dxi-column dataField="name"></dxi-column>
+  <dxi-column dataField="status"></dxi-column>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-editing
+    [allowAdding]="true"
+    [allowDeleting]="true"
+    [allowUpdating]="true"
+  ></dxo-editing>
+</dx-data-grid>
