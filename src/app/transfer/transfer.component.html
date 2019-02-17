@@ -1,0 +1,7 @@
+<dx-data-grid id="tranfer" [dataSource]="transfers" [showBorders]="true">
+  <dxi-column dataField="Id"></dxi-column>
+  <dxi-column dataField="Name"></dxi-column>
+  <dxi-column dataField="Status"></dxi-column>
+</dx-data-grid>
+
+<dx-button text="Refresh transfer" (onClick)="getTransfer()"></dx-button>

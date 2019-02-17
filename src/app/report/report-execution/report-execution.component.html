@@ -2,7 +2,7 @@
   <div class="table-responsive">
     <div class="card">
       <div class="card-block">
-        <h3 class="card-title">Tasks</h3>
+        <h3 class="card-title">Report Run</h3>
         <div class="card-text">
           <table class="table table-hover">
             <thead>
@@ -12,9 +12,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let task of tasks" class="task">
-                <td>{{ task.name }}</td>
-                <td>{{ task.status }}</td>
+              <tr *ngFor="let execution of reportExecutions" class="task">
+                <td>{{ execution.id }}</td>
+                <td>{{ execution.name }}</td>
+                <td>{{ execution.status }}</td>
               </tr>
             </tbody>
           </table>

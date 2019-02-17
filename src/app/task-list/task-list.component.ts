@@ -1,4 +1,4 @@
-import { TaskService } from "./../service/task.service";
+import { TaskService } from "./../_service/task.service";
 import { Component, OnInit } from "@angular/core";
 import {Task, TaskStatus} from "../_models/task";
 

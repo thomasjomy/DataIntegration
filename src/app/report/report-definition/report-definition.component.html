@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="table-responsive">
+      <div class="card">
+        <div class="card-block">
+          <h3 class="card-title">Report Definition</h3>
+          <div class="card-text">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Staus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let defintion of definitions" class="task">
+                  <td>{{ defintion.name }}</td>
+                  <td>{{ defintion.status }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

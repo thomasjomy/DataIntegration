@@ -1,6 +1,6 @@
 ﻿import { Component, Input } from "@angular/core";
 
-import { AlertService } from "../service/index";
+import { AlertService } from "../_service/index";
 import { Alert, AlertType } from "../_models/index";
 
 @Component({

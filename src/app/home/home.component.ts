@@ -1,6 +1,6 @@
 ﻿import { Component } from "@angular/core";
 
-import { AlertService } from "../service/index";
+import { AlertService } from "../_service/index";
 
 @Component({
   templateUrl: "./home.component.html"
