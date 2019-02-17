@@ -1,10 +1,8 @@
-import { ReportModule } from "./report/report.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { TaskListComponent } from "./task-list/task-list.component";
 import { NavbarComponent } from "./layout/navbar/navbar.component";
-import { RouterModule, Routes } from "@angular/router";
 import { DevExtremeModule } from "devextreme-angular";
 import { DxDataGridModule } from "devextreme-angular";
 
@@ -22,21 +20,8 @@ import { DocumentComponent } from "./document/document.component";
 
 import { FooterComponent } from "./layout/footer/footer.component";
 
-const appRoutes: Routes = [
-  { path: "", component: HomeComponent },
-  { path: "transfer", component: TransferComponent },
-  { path: "multi-alerts", component: MultiAlertsComponent },
-  { path: "schedule", component: ScheduleComponent },
-  { path: "schedule/create", component: ScheduleFormComponent },
-  { path: "schedule/:id/detail", component: ScheduleComponent },
-  { path: "schedule/:id/edit", component: ScheduleFormComponent },
-  { path: "document", component: DocumentComponent },
-  {
-    path: "tasklist",
-    component: TaskListComponent
-  },
-  { path: "**", redirectTo: "" }
-];
+import { ReportModule } from "./report/report.module";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -55,10 +40,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     DevExtremeModule,
     DxDataGridModule,
-    ReportModule.forRoot()
+    ReportModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [AlertService],
   bootstrap: [AppComponent]
